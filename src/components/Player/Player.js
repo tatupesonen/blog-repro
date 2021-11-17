@@ -796,27 +796,3 @@ const Seeker = ({ seek, position, duration }) => {
     </Box>
   )
 }
-
-const query = graphql`
-  query SpotifyTopTracks {
-    trackList: spotifyTopTracks {
-      tracks {
-        items {
-          uri
-          name
-          external_urls {
-            spotify
-          }
-          artists {
-            name
-          }
-          album {
-            images {
-              url
-            }
-          }
-        }
-      }
-    }
-  }
-`
